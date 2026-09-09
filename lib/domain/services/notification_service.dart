@@ -164,6 +164,7 @@ class NotificationService {
     final body = firstName != null
         ? "If it feels right, $firstName is here for a quick hello."
         : "If it feels right, there is still time for a quick hello.";
+    final exact = await canScheduleExactAlarms();
 
     await _plugin.zonedSchedule(
       _idStreakRescue,
@@ -173,7 +174,9 @@ class NotificationService {
       _actionDetails(),
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      androidScheduleMode: exact
+          ? AndroidScheduleMode.exactAllowWhileIdle
+          : AndroidScheduleMode.inexactAllowWhileIdle,
       payload: '/quest',
     );
   }

@@ -1,0 +1,6 @@
+# Copy this file to android/key.properties. Never commit the real file.
+# Use an absolute path for storeFile, or a path relative to android/.
+storePassword=replace-with-a-strong-secret
+keyPassword=replace-with-a-strong-secret
+keyAlias=douu-upload
+storeFile=upload-keystore.jks
