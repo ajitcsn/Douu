@@ -1,143 +1,103 @@
-# Douu
+<p align="center">
+  <img src="assets/icon/icon.png" width="92" alt="Douu app icon">
+</p>
 
-Stay close to the people who matter. 100% local — no backend, no network calls, no telemetry.
+<h1 align="center">Douu</h1>
 
-## What it does
+<p align="center"><strong>A gentle, private way to stay close to your people.</strong></p>
 
-- Import phone contacts → sort the ~100 who matter into **user-named groups** (Family, College, Work…)
-- Each group has a **cadence** (weekly / monthly / quarterly / custom)
-- Every day Douu fires a low-pressure **quest**: reach out to any K of N due contacts
-- One tap opens the right WhatsApp chat; you send the message; Douu tracks who you reached
+<p align="center">
+  <img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.22%2B-02569B?logo=flutter&logoColor=white">
+  <img alt="Android" src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white">
+  <img alt="Privacy" src="https://img.shields.io/badge/data-local--first-264653">
+</p>
 
-## Tech stack
+Douu helps you turn good intentions into small, manageable moments of connection. Choose the contacts who matter, organise them into communities, and let a flexible Daily Quest suggest who is due for a hello. One tap opens WhatsApp when you decide the timing is right.
 
-Flutter (Dart) · Drift (SQLite) · Riverpod · go_router · flutter_local_notifications
+<p align="center">
+  <img src="assets/screenshots/onboarding-debug.png" width="310" alt="Douu home screen showing daily momentum, communities, and contact sorting">
+</p>
 
-Full dependency list: [pubspec.yaml](pubspec.yaml)
+## Why Douu
 
----
+- **Your people, your rhythm.** Create communities such as Family, Friends, or Work, then set the reconnection cadence that feels right for each one.
+- **Daily Quests that rotate.** Reach out to any few people from the day’s list. Skips are remembered, completed people do not reappear in the same quest, and recent people rotate out when possible.
+- **A soft nudge, never pressure.** Optional reminders respect quiet hours. Douu can also ask a simple sorting question, such as “Is Priya part of Family?”
+- **WhatsApp on your terms.** Douu opens a chat only after you choose a person. Optional message starters are editable.
+- **Private by design.** Contacts, groups, notes, settings, and history live in a local SQLite database. There is no account, analytics, advertising SDK, server, or internet permission.
+- **You own the backup.** Export a passphrase-protected backup when you choose, then restore it on your own device.
 
-## Build & run
+## Run it locally
 
-### Prerequisites
+### What you need
 
-| Tool | Version |
-|------|---------|
-| Flutter | ≥ 3.22 (stable channel) |
-| Dart | ≥ 3.4 |
-| Android SDK | minSdk 24, targetSdk latest stable |
-| Java | 17 (for Gradle) |
+- Flutter **3.22+**
+- Dart **3.4+**
+- Android Studio and an Android device or emulator
+- Java **17** for Gradle
 
 ```bash
-# 1. Clone
-git clone <repo-url> && cd douu
-
-# 2. Install deps
+git clone https://github.com/ajitcsn/Douu.git
+cd Douu
 flutter pub get
-
-# 3. Generate Drift code  ← must run before first build
-dart run build_runner build --delete-conflicting-outputs
-
-# 4. Run on a connected device / emulator
 flutter run
 ```
 
-> **Never** add `internet` permission or any network dependency. The spec is explicit: local-only, forever.
+To run the checks used for this repository:
 
----
-
-## Project layout
-
-```
-lib/
-  main.dart               ← entry; creates AppDatabase, wires ProviderScope
-  app.dart                ← MaterialApp.router + theme
-  router.dart             ← go_router route map (§6)
-  providers.dart          ← all Riverpod providers
-  config/
-    defaults.dart         ← every [PLACEHOLDER] constant in one file
-    theme.dart            ← colours, RAG palette, component defaults
-  data/
-    db/
-      tables.dart         ← Drift table definitions (§4)
-      database.dart       ← AppDatabase, migration, seeding
-      database.g.dart     ← generated (run build_runner)
-    repositories/
-      douu_repository.dart
-  domain/
-    services/
-      contacts_import.dart    §5.1
-      phone_normalizer.dart   E.164 (IN-aware)
-      quest_engine.dart       §5.2 + action path (reach/skip)
-      streak_service.dart     §5.3, §5.4
-      health_service.dart     §5.5 RAG
-      notification_service.dart §5.6
-      whatsapp_launcher.dart  §5.7
-      backup_service.dart     §5.9
-  features/
-    splash/               S0
-    onboarding/           S1–S6
-    hub/                  S7
-    groups/               S8, S9, S10 + shared ContactPicker
-    contact/              S11
-    quest/                S12, S13 (bottom sheet via mixin)
-    insights/             S14
-    settings/             S15, S16
-  shared/widgets/
-    douu_states.dart      DouuLoading / DouuEmpty / DouuError
-    douu_bits.dart        DouuAvatar / RagDot / CadencePill / StreakChip
-test/
-  phone_normalizer_test.dart
+```bash
+flutter analyze
+flutter test
+flutter build apk --debug
 ```
 
----
-
-## Development notes
-
-### Regenerate Drift after schema changes
+If you change Drift database tables, regenerate the checked-in database code:
 
 ```bash
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-### All tunable defaults
+## Build a Play-ready Android bundle
 
-Edit [`lib/config/defaults.dart`](lib/config/defaults.dart). Every `[PLACEHOLDER]` constant from the spec lives here — quest size, cadence presets, RAG thresholds, etc.
+Release builds must be signed with a private upload key. Copy the safe template, replace every placeholder, and keep the real file and keystore out of Git.
 
-### Open decisions (`// OPEN` in code)
+```bash
+cp android/key.properties.example android/key.properties
+flutter build appbundle --release
+```
 
-| # | Decision | Default |
-|---|----------|---------|
-| 1 | Multi-group streak counting | Count toward all groups |
-| 2 | Global streak long-gap reset | Never reset |
-| 3 | Hub card tap target | Whole card → group detail |
-| 4 | Create-group destination | → Group detail |
-| 5 | Confirmation auto-dismiss | 10-min window after wa.me launch |
-| 6 | NudgeLog in backup | Excluded (structure + scores only) |
+The generated bundle is at `build/app/outputs/bundle/release/app-release.aab`. See [Android app signing](https://developer.android.com/studio/publish/app-signing) before creating or rotating an upload key.
 
-### Play Store compliance (if publishing)
+## How it is built
 
-- File a **Play Console Developer Declaration** for `READ_CONTACTS` before 28 Oct 2026 (enforcement date for Android 17 / API 37+).
-- Data Safety form: "no data collected, no data shared" — truthful and fast-track.
+| Area | Choice |
+| --- | --- |
+| App | Flutter and Dart |
+| State and navigation | Riverpod and go_router |
+| Local data | Drift on SQLite |
+| Reminders | flutter_local_notifications, timezone, WorkManager catch-up |
+| Messaging | User-initiated WhatsApp deep links |
+| Backup | Manual, passphrase-protected AES-GCM export |
 
----
-
-## Build milestones (spec §11)
-
-| # | Milestone | Status |
-|---|-----------|--------|
-| M1 | Foundation: scaffold, theme, router, Drift schema, seed, S0 | ✅ |
-| M2 | Contacts: permission flow, import + E.164, S3 | ✅ |
-| M3 | Groups core: S4, S7, S8, S9, S10, quick-sort | ✅ |
-| M4 | Scores: per-group streak, RAG health, S14 | ✅ |
-| M5 | Quest + WhatsApp: quest engine, S12, wa.me handoff, S13, starters | ✅ |
-| M6 | Reminders: notification service, S5, exact-alarm, OEM guidance | ✅ |
-| M7 | Contact detail & settings: S11, S15 | ✅ |
-| M8 | Backup: export/import AES-GCM, S16 | ✅ |
-| M9 | Polish: empty/error/loading states, a11y, perf pass | 🔲 |
-
----
+```
+lib/
+├── data/       Local Drift database and repository
+├── domain/     Quests, reminders, health, backups, contact import
+├── features/   Onboarding, home, communities, quests, insights, settings
+├── shared/     Reusable UI pieces
+└── main.dart   App entry point
+```
 
 ## Privacy
 
-Nothing leaves this device. No analytics, no crash reporter, no HTTP client. The only outbound action is a `wa.me` deep link opened by the user. The only file output is an explicit user-triggered backup via `share_plus`.
+Douu is deliberately local-first. It reads contacts only after permission is granted, stores selected information on the device, and opens WhatsApp only from an action you take. Exported backups are created only when you ask to share one.
+
+Read the full [privacy policy](docs/privacy.html).
+
+## Contributing
+
+Issues and pull requests are welcome. Before submitting a change, run `flutter analyze` and `flutter test`. Please keep the local-only promise intact: do not add network access, telemetry, or an `INTERNET` permission.
+
+## License
+
+No license has been chosen yet. Do not assume permission to reuse this code beyond what applicable law allows.
