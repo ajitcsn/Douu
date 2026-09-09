@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon/icon.png" width="92" alt="Douu app icon">
+  <img src="assets/icon/douu_foreground.png" width="92" alt="Douu app icon">
 </p>
 
 <h1 align="center">Douu</h1>

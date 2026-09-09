@@ -70,4 +70,8 @@ flutter:
 
 flutter_launcher_icons:
   android: true
-  image_path: "assets/icon/icon.png"
+  # The foreground has real alpha transparency. Android supplies the white
+  # background through the adaptive-icon mask, so no corner pixels leak out.
+  image_path: "assets/icon/douu_foreground.png"
+  adaptive_icon_background: "#FFFCFA"
+  adaptive_icon_foreground: "assets/icon/douu_foreground.png"
