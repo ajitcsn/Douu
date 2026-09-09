@@ -1,0 +1,395 @@
+{
+  "_comment": "Side quest idea bank (§ gamification brainstorm). Each entry is a rotating prompt shown on the hub as a 'side quest' — the app never picks the contact for you, you self-select who fits the framing. Add/edit entries freely; 'id' must stay stable once shipped since it's referenced by history rows.",
+  "prompts": [
+    {
+      "id": "two_degrees_apart",
+      "direction": "Contrast & distance",
+      "title": "Two degrees apart",
+      "prompt": "Message two people in your life who've never met each other."
+    },
+    {
+      "id": "opposite_number",
+      "direction": "Contrast & distance",
+      "title": "The opposite number",
+      "prompt": "Reach out to the person who's least like you — different stage of life, different vibe, whatever \"opposite\" means to you."
+    },
+    {
+      "id": "cross_the_aisle",
+      "direction": "Contrast & distance",
+      "title": "Cross the aisle",
+      "prompt": "Check in on someone you don't always see eye to eye with."
+    },
+    {
+      "id": "forward_the_feeling",
+      "direction": "Texture of the message",
+      "title": "Forward the feeling",
+      "prompt": "Send someone a reel, song, or article that reminded you of them today."
+    },
+    {
+      "id": "say_it_dont_type_it",
+      "direction": "Texture of the message",
+      "title": "Say it, don't type it",
+      "prompt": "Send a voice note instead of a text."
+    },
+    {
+      "id": "dig_one_up",
+      "direction": "Texture of the message",
+      "title": "Dig one up",
+      "prompt": "Send someone an old photo they're in."
+    },
+    {
+      "id": "old_job_new_hello",
+      "direction": "Reopen a closed chapter",
+      "title": "Old job, new hello",
+      "prompt": "Message someone from a job or school you've left behind."
+    },
+    {
+      "id": "the_one_who_moved",
+      "direction": "Reopen a closed chapter",
+      "title": "The one who moved",
+      "prompt": "Reach out to someone who moved away and you never adjusted your rhythm with."
+    },
+    {
+      "id": "same_day_different_year",
+      "direction": "Reopen a closed chapter",
+      "title": "Same day, different year",
+      "prompt": "Message someone around the anniversary of how you met or a memory you shared."
+    },
+    {
+      "id": "even_the_score",
+      "direction": "Reciprocity & social debt",
+      "title": "Even the score",
+      "prompt": "Message someone who's messaged you first the last few times."
+    },
+    {
+      "id": "break_the_ice",
+      "direction": "Reciprocity & social debt",
+      "title": "Break the ice",
+      "prompt": "Be the one to speak up first after a long mutual silence."
+    },
+    {
+      "id": "no_reason_needed",
+      "direction": "Reciprocity & social debt",
+      "title": "No reason needed",
+      "prompt": "Reach out to someone specifically because you know they're going through something, not because it's \"their turn.\""
+    },
+    {
+      "id": "good_news_call",
+      "direction": "Emotionally specific roles",
+      "title": "Good news call",
+      "prompt": "Message whoever you'd tell first if something amazing happened today."
+    },
+    {
+      "id": "comic_relief",
+      "direction": "Emotionally specific roles",
+      "title": "Comic relief",
+      "prompt": "Message the person who always makes you laugh, just because."
+    },
+    {
+      "id": "quiet_supporter",
+      "direction": "Emotionally specific roles",
+      "title": "Quiet supporter",
+      "prompt": "Reach out to someone who never asks for anything but always shows up."
+    },
+    {
+      "id": "different_generations",
+      "direction": "Contrast & distance",
+      "title": "Different generations",
+      "prompt": "Message someone a decade or more older or younger than you."
+    },
+    {
+      "id": "introvert_extrovert",
+      "direction": "Contrast & distance",
+      "title": "The introvert and the extrovert",
+      "prompt": "Reach out to someone whose social energy is the total opposite of yours."
+    },
+    {
+      "id": "farthest_away",
+      "direction": "Contrast & distance",
+      "title": "Long distance, short message",
+      "prompt": "Message the person who lives farthest away from you right now."
+    },
+    {
+      "id": "different_worlds",
+      "direction": "Contrast & distance",
+      "title": "Different worlds",
+      "prompt": "Check in with someone whose day-to-day life looks nothing like yours."
+    },
+    {
+      "id": "the_quiet_one",
+      "direction": "Contrast & distance",
+      "title": "The quiet one",
+      "prompt": "Message the person in a group chat who talks the least."
+    },
+    {
+      "id": "new_vs_old",
+      "direction": "Contrast & distance",
+      "title": "New vs. old",
+      "prompt": "Reach out to someone you met this year, then someone you've known for over a decade."
+    },
+    {
+      "id": "unlikely_pair",
+      "direction": "Contrast & distance",
+      "title": "Unlikely pair",
+      "prompt": "Message two people who'd probably never be friends with each other."
+    },
+    {
+      "id": "the_skeptic",
+      "direction": "Contrast & distance",
+      "title": "The skeptic",
+      "prompt": "Check in with someone who always challenges your opinions."
+    },
+    {
+      "id": "opposite_hours",
+      "direction": "Contrast & distance",
+      "title": "Opposite hours",
+      "prompt": "Message someone whose schedule is the reverse of yours — night owl or early bird."
+    },
+    {
+      "id": "different_chapter_same_story",
+      "direction": "Contrast & distance",
+      "title": "Different chapter, same story",
+      "prompt": "Reach out to someone going through a life stage you've already been through."
+    },
+    {
+      "id": "just_a_photo",
+      "direction": "Texture of the message",
+      "title": "Just a photo",
+      "prompt": "Send a photo with no caption — let it speak for itself."
+    },
+    {
+      "id": "three_words",
+      "direction": "Texture of the message",
+      "title": "Three words",
+      "prompt": "Send someone a message that's exactly three words long."
+    },
+    {
+      "id": "meme_that_gets_it",
+      "direction": "Texture of the message",
+      "title": "The meme that gets it",
+      "prompt": "Send a meme that perfectly describes an inside joke between you two."
+    },
+    {
+      "id": "handwritten_feel",
+      "direction": "Texture of the message",
+      "title": "Handwritten feel",
+      "prompt": "Write a message like you're writing a postcard, not a text."
+    },
+    {
+      "id": "ask_dont_tell",
+      "direction": "Texture of the message",
+      "title": "Ask, don't tell",
+      "prompt": "Send someone a genuine question instead of a statement."
+    },
+    {
+      "id": "the_compliment_drop",
+      "direction": "Texture of the message",
+      "title": "The compliment drop",
+      "prompt": "Send a specific, unprompted compliment."
+    },
+    {
+      "id": "screenshot_and_send",
+      "direction": "Texture of the message",
+      "title": "Screenshot and send",
+      "prompt": "Share a screenshot of something that made you think of them."
+    },
+    {
+      "id": "one_emoji_only",
+      "direction": "Texture of the message",
+      "title": "One emoji only",
+      "prompt": "Send a single emoji that captures how you're feeling about them today."
+    },
+    {
+      "id": "the_playlist_share",
+      "direction": "Texture of the message",
+      "title": "The playlist share",
+      "prompt": "Send a song you think they'd like right now."
+    },
+    {
+      "id": "recreate_a_memory",
+      "direction": "Texture of the message",
+      "title": "Recreate a memory",
+      "prompt": "Send something — a photo, song, or quote — that recreates a specific memory you share."
+    },
+    {
+      "id": "roommate_reunion",
+      "direction": "Reopen a closed chapter",
+      "title": "The roommate reunion",
+      "prompt": "Message an old roommate you haven't talked to in a while."
+    },
+    {
+      "id": "childhood_callback",
+      "direction": "Reopen a closed chapter",
+      "title": "Childhood callback",
+      "prompt": "Reach out to a friend from childhood you've lost touch with."
+    },
+    {
+      "id": "the_mentor_check_in",
+      "direction": "Reopen a closed chapter",
+      "title": "The mentor check-in",
+      "prompt": "Message someone who taught or mentored you once."
+    },
+    {
+      "id": "old_flame_new_friendship",
+      "direction": "Reopen a closed chapter",
+      "title": "Old flame, new friendship",
+      "prompt": "Check in with an ex on purely friendly terms, if that bridge is still standing."
+    },
+    {
+      "id": "the_team_you_left",
+      "direction": "Reopen a closed chapter",
+      "title": "The team you left",
+      "prompt": "Message someone from a team or project you're no longer part of."
+    },
+    {
+      "id": "before_they_were_somebody",
+      "direction": "Reopen a closed chapter",
+      "title": "Before they were somebody",
+      "prompt": "Reach out to someone you knew before they became who they are now."
+    },
+    {
+      "id": "the_old_neighbor",
+      "direction": "Reopen a closed chapter",
+      "title": "The neighbor you used to have",
+      "prompt": "Message someone who used to live near you."
+    },
+    {
+      "id": "class_of_yesteryear",
+      "direction": "Reopen a closed chapter",
+      "title": "Class of yesteryear",
+      "prompt": "Reach out to an old classmate you haven't spoken to since graduation."
+    },
+    {
+      "id": "the_group_that_dissolved",
+      "direction": "Reopen a closed chapter",
+      "title": "The group that dissolved",
+      "prompt": "Message someone from a friend group that isn't really a group anymore."
+    },
+    {
+      "id": "where_are_they_now",
+      "direction": "Reopen a closed chapter",
+      "title": "Where are they now",
+      "prompt": "Reach out to someone you've wondered about but never actually messaged."
+    },
+    {
+      "id": "the_always_there_friend",
+      "direction": "Reciprocity & social debt",
+      "title": "The always-there friend",
+      "prompt": "Message the person who always shows up for you, even when you don't ask."
+    },
+    {
+      "id": "return_the_favor",
+      "direction": "Reciprocity & social debt",
+      "title": "Return the favor",
+      "prompt": "Reach out to someone who helped you out and you never properly thanked."
+    },
+    {
+      "id": "the_unanswered_text",
+      "direction": "Reciprocity & social debt",
+      "title": "The unanswered text",
+      "prompt": "Reply to that one message you've been meaning to respond to for too long."
+    },
+    {
+      "id": "check_on_the_checker_inner",
+      "direction": "Reciprocity & social debt",
+      "title": "Check on the checker-inner",
+      "prompt": "Message the person who always checks in on you — ask how they're doing for once."
+    },
+    {
+      "id": "the_one_who_remembers",
+      "direction": "Reciprocity & social debt",
+      "title": "The one who remembers",
+      "prompt": "Reach out to someone who always remembers the small details about your life."
+    },
+    {
+      "id": "uneven_ledger",
+      "direction": "Reciprocity & social debt",
+      "title": "Uneven ledger",
+      "prompt": "Message someone you feel like you owe a real conversation to."
+    },
+    {
+      "id": "silent_supporter",
+      "direction": "Reciprocity & social debt",
+      "title": "Silent supporter",
+      "prompt": "Reach out to someone who's liked or reacted to your stuff but you never message back."
+    },
+    {
+      "id": "the_favor_bank",
+      "direction": "Reciprocity & social debt",
+      "title": "The favor bank",
+      "prompt": "Message someone you'd call if you needed a favor — check in before you need one."
+    },
+    {
+      "id": "be_the_effort",
+      "direction": "Reciprocity & social debt",
+      "title": "Be the effort",
+      "prompt": "Reach out to someone you know puts more effort into the friendship than you do."
+    },
+    {
+      "id": "the_waiting_game",
+      "direction": "Reciprocity & social debt",
+      "title": "The waiting game",
+      "prompt": "Message someone you've been \"meaning to text back\" for over a week."
+    },
+    {
+      "id": "the_hype_person",
+      "direction": "Emotionally specific roles",
+      "title": "The hype person",
+      "prompt": "Message whoever always hypes you up before something big."
+    },
+    {
+      "id": "bad_day_translator",
+      "direction": "Emotionally specific roles",
+      "title": "Bad day translator",
+      "prompt": "Reach out to the person you'd vent to on a genuinely bad day."
+    },
+    {
+      "id": "the_realist",
+      "direction": "Emotionally specific roles",
+      "title": "The realist",
+      "prompt": "Message the friend who always gives it to you straight."
+    },
+    {
+      "id": "proud_of_you_person",
+      "direction": "Emotionally specific roles",
+      "title": "Proud-of-you person",
+      "prompt": "Reach out to someone who'd be proud of something you did recently, even if it was small."
+    },
+    {
+      "id": "the_nostalgia_buddy",
+      "direction": "Emotionally specific roles",
+      "title": "The nostalgia buddy",
+      "prompt": "Message the person who shares your favorite old memories."
+    },
+    {
+      "id": "emergency_contact_energy",
+      "direction": "Emotionally specific roles",
+      "title": "Emergency contact energy",
+      "prompt": "Reach out to whoever you'd actually call in an emergency."
+    },
+    {
+      "id": "the_dreamer",
+      "direction": "Emotionally specific roles",
+      "title": "The dreamer",
+      "prompt": "Message someone who always encourages your big ideas."
+    },
+    {
+      "id": "low_key_check_in",
+      "direction": "Emotionally specific roles",
+      "title": "Low-key check-in",
+      "prompt": "Reach out to someone who never makes a big deal out of anything, just because."
+    },
+    {
+      "id": "the_celebration_text",
+      "direction": "Emotionally specific roles",
+      "title": "The celebration text",
+      "prompt": "Message whoever you'd tell about a small personal win."
+    },
+    {
+      "id": "comfort_zone",
+      "direction": "Emotionally specific roles",
+      "title": "Comfort zone",
+      "prompt": "Reach out to the person who makes you feel instantly at ease, no matter how long it's been."
+    }
+  ]
+}

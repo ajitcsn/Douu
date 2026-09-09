@@ -1,0 +1,13 @@
+# The wrapper scripts and JAR are versioned so a fresh public clone builds
+# without requiring a globally installed Gradle.
+/.gradle
+/captures/
+/local.properties
+GeneratedPluginRegistrant.java
+.cxx/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks

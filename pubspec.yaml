@@ -1,0 +1,73 @@
+name: douu
+description: "Stay close to the people who matter. 100% local, no backend."
+publish_to: "none"
+version: 0.2.0+2
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Local DB
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.3
+  path: ^1.9.0
+
+  # Contacts
+  flutter_contacts: ^1.1.9+2
+
+  # Phone normalization
+  phone_numbers_parser: ^8.2.2
+
+  # Notifications + timezone
+  flutter_local_notifications: ^17.2.1
+  timezone: ^0.9.4
+  flutter_timezone: ^4.1.0
+
+  # Background work (Android catch-up only)
+  workmanager: ^0.9.0
+
+  # WhatsApp deep link
+  url_launcher: ^6.3.0
+  android_intent_plus: ^6.0.0
+
+  # Permissions
+  permission_handler: ^11.3.1
+
+  # Backup export/import
+  file_picker: ^8.0.6
+  share_plus: ^9.0.0
+
+  # Encryption for optional passphrase-protected export
+  cryptography: ^2.7.0
+
+  # Misc
+  intl: ^0.19.0
+  collection: ^1.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  drift_dev: ^2.18.0
+  build_runner: ^2.4.11
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/quest_ideas.json
+
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/icon/icon.png"
