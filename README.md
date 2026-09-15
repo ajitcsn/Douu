@@ -15,7 +15,7 @@
 Douu helps you turn good intentions into small, manageable moments of connection. Choose the contacts who matter, organise them into communities, and let a flexible Daily Quest suggest who is due for a hello. One tap opens WhatsApp when you decide the timing is right.
 
 <p align="center">
-  <img src="assets/screenshots/onboarding-debug.png" width="310" alt="Douu home screen showing daily momentum, communities, and contact sorting">
+  <img src="assets/screenshots/play-home.png" width="310" alt="Douu home screen showing daily momentum, communities, and contact sorting">
 </p>
 
 ## Why Douu

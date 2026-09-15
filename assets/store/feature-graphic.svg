@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fafdff"/>
+      <stop offset="1" stop-color="#e8f5fb"/>
+    </linearGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#d7eaf5"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="500" rx="28" fill="url(#bg)"/>
+  <rect width="1024" height="500" rx="28" fill="url(#dots)" opacity=".7"/>
+  <circle cx="858" cy="107" r="174" fill="#d9effa"/>
+  <circle cx="945" cy="409" r="152" fill="#f9e5bd" opacity=".75"/>
+  <rect x="72" y="90" width="94" height="94" rx="28" fill="#ffffff" stroke="#b9ddef" stroke-width="4"/>
+  <circle cx="119" cy="137" r="27" fill="#172f49"/>
+  <path d="M101 143c10-8 23-8 35 0-4 20-13 29-18 29s-14-9-17-29Z" fill="#ffffff"/>
+  <circle cx="127" cy="129" r="5" fill="#172f49"/>
+  <path d="M82 127c14 8 24 17 31 28-13-1-25-6-36-15" fill="#4aa9e9"/>
+  <path d="M83 113c13 5 24 12 32 23-13 1-26-2-39-10" fill="#61c8a2"/>
+  <path d="M101 102c9 3 17 9 23 18-11 2-21 1-30-4" fill="#f25e93"/>
+  <path d="M125 113c8 3 14 9 17 16-9 2-16 1-23-4" fill="#f6ad24"/>
+  <text x="194" y="137" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" fill="#172f49">Douu</text>
+  <text x="76" y="253" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#172f49">Keep your people close.</text>
+  <text x="76" y="309" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#3d607d">Gentle reminders for the relationships that matter.</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#172f49">
+    <rect x="76" y="358" width="152" height="58" rx="29" fill="#c5e7c3"/>
+    <text x="111" y="395">Family</text>
+    <rect x="246" y="358" width="157" height="58" rx="29" fill="#dfc2e9"/>
+    <text x="281" y="395">Friends</text>
+    <rect x="421" y="358" width="128" height="58" rx="29" fill="#ffe0a8"/>
+    <text x="462" y="395">Work</text>
+  </g>
+</svg>
